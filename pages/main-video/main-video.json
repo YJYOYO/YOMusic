@@ -1,0 +1,8 @@
+{
+	"navigationBarTitleText": "推荐视频",
+	"navigationBarBackgroundColor": "#BEE7E9",
+	"enablePullDownRefresh": true,
+	"usingComponents": {
+		"video-item": "../../components/video-item/video-item"
+	}
+}

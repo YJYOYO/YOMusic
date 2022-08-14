@@ -1,0 +1,51 @@
+/* pages/main-music/main-music.wxss */
+page {
+  --search-background-color: #fff;
+  --search-padding: 10px 0;
+
+  box-sizing: border-box;
+  padding: 0 24rpx;
+  background-color: #fafafa;
+}
+
+.banner-container {
+  position: relative;
+}
+/* 轮播图的样式 */
+.banner {
+  /* position: relative; */
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.banner .wx-swiper-dot {
+  /* position: absolute; */
+  bottom: 15rpx;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+}
+
+.indicator {
+  display: flex;
+  position: absolute;
+  width: 200rpx;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.indicator .dot {
+  width: 10rpx;
+  height: 10rpx;
+  margin: 0 6rpx;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+.indicator .active {
+  background-color:#BEE7E9;
+}

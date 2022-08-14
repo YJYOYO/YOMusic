@@ -1,0 +1,54 @@
+/* components/ranking-item/ranking-item.wxss */
+.ranking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 12rpx;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+.desc {
+  padding: 24rpx;
+  overflow: hidden;
+}
+.desc .ranking {
+  font-size: 34rpx;
+}
+
+.desc .song {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #333;
+  margin-top: 6rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.desc .singer {
+  color: #999;
+}
+
+.pic-tip {
+  position: relative;
+  display: flex;
+}
+
+.pic-tip .image {
+  width: 220rpx;
+  height: 220rpx;
+  background-size: cover;
+}
+
+.pic-tip .count {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  font-size: 22rpx;
+  border-radius: 12rpx;
+  padding: 6rpx 10rpx;
+  background: rgba(0,0,0,.5);
+}

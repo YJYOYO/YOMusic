@@ -1,0 +1,66 @@
+<!--pages/main-music/main-music.wxml -->
+<!-- 搜索框 -->
+<van-search
+  value="{{ searchValue }}"
+  shape="round"
+  background="#fafafa"
+  placeholder="请输入搜索关键词"
+  bind:click-input="onSearchClick"
+/>
+
+<!-- 轮播图展示 -->
+<view 
+  class="banner-container"
+  >
+  <swiper
+  class="banner"
+  circular
+  autoplay
+  interval="4000"
+  style="height: {{ bannerHeight }}px;"
+  bindchange="currentTab"
+>
+  <block wx:for="{{ banners }}" wx:key="targetId">
+    <swiper-item class="item">
+        <image
+          class="banner-image"
+          src="{{ item.imageUrl }}"
+          mode="widthFix"
+          bindload="onBannerImageLoad"
+        >
+        </image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 指示器 -->
+  <view class="indicator">
+      <block wx:for="{{ banners.length }}" wx:key="index">
+        <text class="dot {{ index === currentIndex ? 'active' : '' }}"></text>
+      </block>
+  </view>
+</view>
+
+<!-- 推荐歌曲 -->
+<view class="recommend" wx:if="{{ recommendSongs.length }}">
+  <area-header title="推荐歌曲" bind:moreclick="onRecommendMoreClick"></area-header>
+  <view class="list">
+    <block wx:for="{{ recommendSongs }}" wx:key="id">
+      <song-item-v1 item-data="{{ item }}"></song-item-v1>
+    </block>
+  </view>
+</view>
+
+<!-- 推荐歌单 -->
+
+<menu-area title="热门歌单" menuList="{{ hotMenuList }}"></menu-area>
+<menu-area title="推荐歌单" menuList="{{ recMenuList }}"></menu-area>
+
+<!-- 巅峰榜 -->
+<view class="ranking" wx:if="{{ isRankingData }}">
+  <area-header title="巅峰榜" hasMore="{{ false }}"></area-header>
+  <view class="ranking-list">
+    <block wx:for="{{ rankingInfos }}" wx:key="id">
+      <ranking-item item-data="{{ item }}" key="{{ index }}"></ranking-item>
+    </block>
+  </view>
+</view>
