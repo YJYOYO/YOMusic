@@ -45,7 +45,7 @@
   <area-header title="推荐歌曲" bind:moreclick="onRecommendMoreClick"></area-header>
   <view class="list">
     <block wx:for="{{ recommendSongs }}" wx:key="id">
-      <song-item-v1 item-data="{{ item }}"></song-item-v1>
+      <song-item-v1 item-data="{{ item }}" data-index="{{ index }}" bindtap="onSongItemTap"></song-item-v1>
     </block>
   </view>
 </view>
@@ -62,5 +62,27 @@
     <block wx:for="{{ rankingInfos }}" wx:key="id">
       <ranking-item item-data="{{ item }}" key="{{ index }}"></ranking-item>
     </block>
+  </view>
+</view>
+
+<!-- 播放工具栏 -->
+<view class="play-bar-placeholder" wx:if="{{currentSong.name || isPlaying}}"></view>
+<view class="play-bar" wx:if="{{currentSong.name || isPlaying}}">
+  <view class="left">
+    <image 
+      class="album album-anim" 
+      src="{{currentSong.al.picUrl}}"
+      style="animation-play-state: {{ isPlaying? 'running': 'paused' }};"
+      bindtap="onPlayBarAlbumTap"
+    />
+    <view class="name">{{currentSong.name}}</view>
+  </view>
+  <view class="right">
+    <image 
+      class="play" 
+      src="/assets/images/music/{{ isPlaying ? 'pause': 'play' }}_icon.png"
+      bindtap="onPlayOrPauseBtnTap"
+    />
+    <image class="icon" src="/assets/images/music/playlist_icon.png"></image>
   </view>
 </view>

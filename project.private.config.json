@@ -21,6 +21,13 @@
 					"query": "type=menu&id=7536731516",
 					"launchMode": "default",
 					"scene": null
+				},
+				{
+					"name": "视频播放",
+					"pathName": "pages/music-player/music-player",
+					"query": "id=475479888",
+					"launchMode": "default",
+					"scene": null
 				}
 			]
 		}
