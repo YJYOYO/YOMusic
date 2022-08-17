@@ -82,7 +82,6 @@ Page({
 	// 轮播图拿到currentIndex
 	currentTab(event) {
 		this.setData({ currentIndex: event.detail.current })
-		console.log(this.data.currentIndex);
 	},
 
 	onSearchClick() {

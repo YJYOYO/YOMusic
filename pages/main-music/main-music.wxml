@@ -33,7 +33,7 @@
     </block>
   </swiper>
   <!-- 指示器 -->
-  <view class="indicator">
+  <view class="indicator" wx:if="{{ bannerHeight }}"> 
       <block wx:for="{{ banners.length }}" wx:key="index">
         <text class="dot {{ index === currentIndex ? 'active' : '' }}"></text>
       </block>
