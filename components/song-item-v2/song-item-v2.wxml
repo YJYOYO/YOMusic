@@ -8,4 +8,5 @@
       <text>{{ itemData.ar[0].name }}</text>
     </view>
   </view>
+  <van-icon class="more-icon" name="more-o" catchtap="onMoreIconTap" />
 </view>

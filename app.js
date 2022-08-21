@@ -17,5 +17,10 @@ App({
         this.globalData.contentHeight = res.screenHeight - res.statusBarHeight - 44
       }
     })
+
+    // 云开发能力进行初始化
+    wx.cloud.init({
+      env: "cloud1-0gs6ryp4f0fc9624"
+    })
   }
 })

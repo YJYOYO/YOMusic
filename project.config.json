@@ -1,5 +1,6 @@
 {
 	"description": "项目配置文件",
+	"cloudfunctionRoot": "cloudfunctions/",
 	"packOptions": {
 		"ignore": [],
 		"include": []
@@ -46,6 +47,6 @@
 	"condition": {},
 	"editorSetting": {
 		"tabIndent": "tab",
-		"tabSize": 4
+		"tabSize": 2
 	}
 }
